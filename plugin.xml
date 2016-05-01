@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-lfe.BeameQRScanner" version="1.0.1">
+ <name>BeameQRScanner</name>
+ <description></description>
+ <keywords></keywords>
+ <license></license>
+ <js-module src="www/BeameQRController.js" name="BeameQRController">
+  <clobbers target="BeameQRController"/>
+ </js-module>
+ <platform name="ios">
+  <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+   <string>App use Locations service mode In Use</string>
+  </config-file>
+  <config-file target="config.xml" parent="/*">
+   <feature name="BeameQRController">
+    <param name="ios-package" value="BeameQRController"/>
+   </feature>
+  </config-file>
+  <header-file src="Plugin/BCQRManager.h"/>
+  <header-file src="Plugin/BCQRViewController.h"/>
+  <header-file src="Plugin/BeameQRController.h"/>
+  <header-file src="Plugin/QRCameraSwitchButton.h"/>
+  <header-file src="Plugin/QRCodeReader.h"/>
+  <header-file src="Plugin/QRCodeReaderDelegate.h"/>
+  <header-file src="Plugin/QRCodeReaderView.h"/>
+  <header-file src="Plugin/QRCodeReaderViewController.h"/>
+  <header-file src="Plugin/QRListener.h"/>
+  <header-file src="Plugin/QRToggleTorchButton.h"/>
+  <source-file src="Plugin/BCQRManager.m"/>
+  <source-file src="Plugin/BCQRViewController.m"/>
+  <source-file src="Plugin/BeameQRController.m"/>
+  <source-file src="Plugin/QRCameraSwitchButton.m"/>
+  <source-file src="Plugin/QRCodeReader.m"/>
+  <source-file src="Plugin/QRCodeReaderView.m"/>
+  <source-file src="Plugin/QRCodeReaderViewController.m"/>
+  <source-file src="Plugin/QRListener.m"/>
+  <source-file src="Plugin/QRToggleTorchButton.m"/>
+  <framework src="SystemConfiguration.framework"/>
+  <framework src="CoreVideo.framework"/>
+  <framework src="CoreMedia.framework"/>
+  <framework src="AVFoundation.framework"/>
+  <framework src="AudioToolbox.framework"/>
+  <framework src="CoreMedia.framework"/>
+  <framework src="CFNetwork.framework"/>
+  <framework src="Security.framework"/>
+  <framework src="Photos.framework"/>
+  <framework src="CoreLocation.framework"/>
+  <framework src="CoreMotion.framework"/>
+ </platform>
+</product>

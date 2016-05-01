@@ -1,0 +1,6 @@
+# BeameQRScanner
+
+```sh
+# Start scanner
+
+```
